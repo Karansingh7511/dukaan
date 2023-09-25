@@ -1,0 +1,231 @@
+:root{
+ 
+  --nav-grey: #999999;
+  --primary-green: #17B31B;
+  --active-bg: #343B53;
+  --heading-black: #1A181E;
+  --primary-blue: #146EB4;
+  --light-grey: #4D4D4D;
+  --search-bg: #F2F2F2;
+  --bg-grey: #FAFAFA;
+  --grey: #E6E6E6;
+  --black-d9: #D9D9D9;
+  --dark-blue: #0E4F82;
+  --dark-grey: #808080;
+  --nav-color: #1E2640;
+}
+
+.payoutInfo {
+  margin: 0 !important;
+  position: absolute;
+  top: 154px;
+  left: 0;
+  border-radius: 0 0 8px 8px;
+  background-color: #0E4F82;
+  width: 100%; /* Adjust the width for responsiveness */
+  display: flex;
+  flex-direction: column; /* Stack the elements vertically on small screens */
+  align-items: center; /* Center align on small screens */
+  padding: 8px 24px;
+  box-sizing: border-box;
+  z-index: 1;
+  font-size: 14px;
+  color: #F2F2F2;
+
+}
+
+.payoutInfo div {
+  line-height: 20px;
+}
+
+.payoutInfo .payoutTitle {
+  font-weight: 500;
+}
+
+
+
+.transactionsSection{
+  display: flex; flex-direction: column; gap: 20px; width: 100%;
+}
+
+.transactionsSectionHeading{
+  font-weight: 500; font-size: 20px; line-height: 28px; color: #1A181E;
+}
+
+.buttonWrapper button{
+  border-radius: 30px;  padding: 6px 16px; border: none; font-weight: 500; font-size: 14px; line-height: 20px;
+}
+
+.primaryButton{
+  background-color: #146EB4; color: #fff;  margin-right: 12px; 
+}
+
+.seconadaryButton{
+  background-color: #E6E6E6; color: #808080;
+}
+
+
+.tableDataWrapper{
+  background-color: #FFF;
+  padding: 12px 12px 8px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 8px;
+}
+
+.filterWrapper{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.searchBoxWrapper{
+  width: 248px;
+  padding: 10px 16px;
+  background: transparent;
+  border: 0.5px solid black;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tableTextbox{
+  border: none;
+  color: var(--nav-grey);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.filterDownloadContainer{
+  display: flex;
+  gap: 16px;
+  padding: 2px;
+}
+
+.order{
+  width: 80px;
+  border-radius: 4px;
+  color: var(--light-grey);
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--black-d9);
+  background-color: transparent;
+  height: 36px;
+}
+
+.downloadLink{
+  width: 36px;
+  height: 36px;
+}
+
+/* TABLE */
+.transactionDisplaytable {
+  border-collapse: collapse;
+  width: 100%;
+  box-shadow: 0px 2px 6px 0px #1A181E0A;
+  border-radius: 8px;
+}
+.downwardArrow{
+  margin-left: 4px;
+}
+tr th{
+  padding: 10px 12px;
+}
+td{
+  padding: 14px 12px;
+}
+th {
+  background: var(--search-bg);
+  color:var(--light-grey);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  width: 150px;
+  border-radius: 4px;
+}
+.transactionDisplaytable th:nth-child(-n+3) {
+  text-align: start; /* Align the first three headers to the start (left) */
+}
+
+.transactionDisplaytable th:nth-child(n+4) {
+  text-align: end; /* Align the last three headers to the end (right) */
+}
+.transactionDisplaytable td:nth-child(-n+3) {
+  text-align: start;
+}
+.transactionDisplaytable td:nth-child(n+4) {
+  text-align: end;
+}
+
+td{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--light-grey);
+  border-bottom: 1px solid var(--black-d9);
+}
+
+table tr:last-child td{
+  border: none;
+}
+.transactionDisplaytable td:nth-child(1) {
+  font-weight: 500;
+  color: var(--primary-blue);
+}
+
+.conditionBox{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.Indicator{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.offline{
+  background-color: var(--nav-grey);
+}
+
+.working{
+  background-color: var(--primary-green);
+}
+
+
+@media screen and (min-width: 500px) {
+  /* Apply styles for screens wider than 768px (adjust as needed) */
+  .payoutInfo {
+      flex-direction: row; /* Display elements in a row on larger screens */
+      justify-content: space-between; /* Add space between elements on larger screens */
+      max-width: 100%; /* Allow full width on larger screens */
+      width: 273px; /* Restore width for larger screens */
+      align-items: flex-start; 
+      display: none;
+      
+      
+
+      /* Align elements to the top on larger screens */
+  }
+
+  .payoutTitle,p{
+    position: unset;
+    
+  }
+
+  .payoutDate{
+    position: relative;
+  }
+ 
+
+
+}
+
+
+
